@@ -11,23 +11,55 @@
 		</h2>
 		<div class="links">
 			<a
-				href="#"
-				class="button--grey"
+				href="/about"
+				class="button--green"
 			>
 				About
 			</a>
 			<a
-				href="#"
+				href="/posts"
 				class="button--green"
 			>
-				Documentation
+				Posts
 			</a>
+		</div>
+		<div class="posts">
+			<span class="post" v-for="post in posts" :key="post.id">
+				<nuxt-link :to="{ name:'posts-id', params: { id: post.id }}" class="button--grey">{{ post.title }}</nuxt-link>
+			</span>
 		</div>
   	</section>
 </template>
 
 <script>
-export default {}
+export default {
+	head: {
+		title: "Home Page 🤓",
+		meta: [
+				{
+					name: 'twitter:title',
+					content: 'Nuxt Fundamentals site'
+				},
+				{
+					name: 'twitter:description',
+					content: 'A simple website made with Nuxt to learn the fundamentals'
+				},
+				{
+					name: 'twitter:image',
+					content: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80'
+				},
+				{
+					name: 'twitter:card',
+					content: 'summary-large-image'
+				}
+			]
+	},
+	computed: {
+		posts() {
+			return this.$store.state.posts.all;
+		}
+	}
+}
 </script>
 
 <style scoped>
@@ -57,6 +89,9 @@ export default {}
 }
 .links {
 	display: block;
+	padding-top: 1em;
+}
+.posts {
 	padding-top: 1em;
 }
 </style>
