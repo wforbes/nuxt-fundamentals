@@ -73,7 +73,7 @@ article * {
 	margin-bottom: 1rem;
 }
 aside {
-	min-width: 280px;
+	min-width: 120px;
 	max-width: 280px;
 	padding-left: 2rem;
 }
