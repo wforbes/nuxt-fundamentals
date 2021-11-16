@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/posts/purple-dogs", {data:[{}],fetch:{},mutations:[]});

@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/posts/whats-old", {data:[{}],fetch:{},mutations:[]});
