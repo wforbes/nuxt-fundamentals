@@ -23,7 +23,7 @@ export const state = ({
 		{
 			id: "purple-dogs",
 			title: "Dogs That Are Purple",
-			body: `They are full of grape jelly. They are squishy and sticky. They taste like grape jelly.`
+			body: `"They are full of grape jelly. They are squishy and sticky. They taste like grape jelly." - Amanda`
 		}
 	]
 })
